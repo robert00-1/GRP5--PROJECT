@@ -3,9 +3,20 @@
     {
       "id": 1,
       "title": "React JS",
-      "description": "Learn React from basics",
+      "description": "Learn React from basics including components, hooks and routing.",
       "duration": "3 Months",
-      "fee": 500
+      "fee": 500,
+      "instructor": "Penina Wanyama",
+      "credits": 3
+    },
+    {
+      "id": 2,
+      "title": "Database Systems",
+      "description": "Introduction to SQL, database design and normalization.",
+      "duration": "4 Months",
+      "fee": 600,
+      "instructor": "Samuel Wanjau",
+      "credits": 4
     }
   ],
   "students": [
@@ -13,8 +24,22 @@
       "id": 1,
       "name": "John Doe",
       "email": "john@gmail.com",
+      "phone": "0712345678",
+      "courseId": 1
+    },
+    {
+      "id": 2,
+      "name": "Sharon Ouko",
+      "email": "sharon@gmail.com",
+      "phone": "0798765432",
+      "courseId": 2
+    },
+    {
+      "id": 3,
+      "name": "Robert Mmasi",
+      "email": "robert@gmail.com",
+      "phone": "0700111222",
       "courseId": 1
     }
   ]
 }
-
