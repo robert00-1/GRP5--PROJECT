@@ -48,7 +48,7 @@ Delete or edit records directly from the lists.
 # Screenshot
 ![alt text](<Screenshot from 2026-02-22 10-30-47.png>)
 
-![alt text](<Screenshot from 2026-02-22 10-56-35.png>)
+
 ![alt text](<Screenshot from 2026-02-22 10-31-15.png>)
 
 # Licences
