@@ -1,45 +1,71 @@
-import { useEffect, useState } from "react";
-import CourseCard from "../components/CourseCard";
-import toast from "react-hot-toast";
+import { useState, useEffect } from "react";
+import { getCourses, deleteCourse } from "../services/api";
+import { Link } from "react-router-dom"; // ← Make sure Link is imported
+import Button from "../components/Button";
 
 function Courses() {
   const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
-  // Fetch courses
   useEffect(() => {
-    fetch("http://localhost:3000/courses")
-      .then((res) => res.json())
-      .then((data) => setCourses(data))
-      .catch(() => toast.error("Failed to load courses"));
+    const fetchCoursesData = async () => {
+      try {
+        const data = await getCourses();
+        setCourses(data);
+      } catch (err) {
+        console.error(err);
+        setError("Failed to fetch courses. Please check if the server is running.");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchCoursesData();
   }, []);
 
-  // Delete course
-  const handleDelete = (id) => {
-    fetch(`http://localhost:3000/courses/${id}`, {
-      method: "DELETE",
-    })
-      .then(() => {
-        setCourses(courses.filter((course) => course.id !== id));
-        toast.success("Course deleted successfully");
-      })
-      .catch(() => toast.error("Delete failed"));
+  const handleDelete = async (id) => {
+    try {
+      await deleteCourse(id);
+      setCourses(courses.filter((c) => c.id !== id));
+    } catch (err) {
+      console.error(err);
+      alert("Failed to delete course.");
+    }
   };
 
-  return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6 text-center">
-        All Courses
-      </h1>
+  if (loading) return <p className="text-gray-600">Loading courses...</p>;
+  if (error) return <p className="text-red-500">{error}</p>;
+  if (!courses.length) return <p className="text-gray-600">No courses found.</p>;
 
-      <div className="grid md:grid-cols-3 gap-6">
+  return (
+    <div className="p-6 space-y-6">
+
+      {/* ===== Header with Add Course Button ===== */}
+      <div className="flex justify-between items-center">
+        <h2 className="text-2xl font-semibold">Courses List</h2>
+        <Link to="/course/new">
+          <Button color="green">Add Course</Button>
+        </Link>
+      </div> 
+
+      {/* ===== Courses Grid ===== */}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {courses.map((course) => (
-          <CourseCard
+          <div 
             key={course.id}
-            course={course}
-            onDelete={handleDelete}
-          />
+            className="border rounded-xl p-4 shadow-sm hover:shadow-md transition"
+          >
+            <h3 className="text-lg font-semibold">{course.name}</h3>
+            <p className="text-gray-600 text-sm">({course.description})</p>
+            <p className="text-gray-500 text-xs mt-1">Credits: {course.credits}</p>
+            
+            <div className="flex gap-2 mt-4">
+              <Button color="red" onClick={() => handleDelete(course.id)}>Delete</Button>
+            </div>
+          </div>
         ))}
-      </div>
+      </div> 
     </div>
   );
 }

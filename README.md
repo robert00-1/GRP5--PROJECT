@@ -1,16 +1,59 @@
-# React + Vite
+# Title 
+Sudent Course Management System(SCMS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Description
+A web-based application to manage student,courses and enrollments efficietly. SCMS provide administrators and educator with an intuitive interface to add, edit ,delete and track students and courses , while maintaining consistent records.
 
-Currently, two official plugins are available:
+# Tool
+vite
+tailwind Css
+React
+react hot toast
+react icon
+react router dom
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Setup
+followthis step to access and run this application
+- clone repository into local machine
+git clone
 
-## React Compiler
+-navigate into the project folder
+cd-SCMS-grp5
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- install all dependancies
+npm install
+npm run dev
+-open your VS code . to access code data 
 
-## Expanding the ESLint configuration
+start JSON Server
+npx json-server --watch data/db.json --port 3002
+ 
+ start react app
+ npm run dev and copy paste link provided into your browser to view the application
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ # Additional Instruction
+ make sure you have install all dependacies
+ npm install
+
+ # Usage
+
+Navigate to Home to see quick stats.
+
+Go to Students or Courses pages to manage data.
+
+Use Add Student / Add Course buttons to add new records.
+
+Delete or edit records directly from the lists.
+
+# Screenshot
+![alt text](<Screenshot from 2026-02-22 10-30-47.png>)
+
+![alt text](<Screenshot from 2026-02-22 10-30-24.png>)
+![alt text](<Screenshot from 2026-02-22 10-31-15.png>)
+
+# Licences
+This project is MT licenced 
+
+# Author 
+Robert Mmasi
+Software Engineering Student
