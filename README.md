@@ -34,6 +34,10 @@ npx json-server --watch data/db.json --port 3002
  # Additional Instruction
  make sure you have install all dependacies
  npm install
+ - run JSON Server 
+ npx json-server --watch data/db.json --port 3002
+ -Run Fronted
+ npm run dev in seperate terminal
 
  # Usage
 
@@ -44,6 +48,41 @@ Go to Students or Courses pages to manage data.
 Use Add Student / Add Course buttons to add new records.
 
 Delete or edit records directly from the lists.
+
+# Project Stracture
+scms-project/
+│
+├── public/
+│   └── index.html                
+│
+├── src/
+│   │
+│   ├── pages/                     
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Courses.jsx
+│   │   ├── CourseDetail.jsx
+│   │   ├── AddCourse.jsx
+│   │   ├── Students.jsx
+│   │   └── AddStudent.jsx
+│   │
+│   ├── components/                
+│   │   ├── Layout.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── StudentCard.jsx
+│   │   ├── CourseCard.jsx
+│   │   └── Button.jsx
+│   │
+│   ├── App.jsx                  
+│   ├── main.jsx                   #
+│   └── main.css      (tailwind css)            
+│
+├── data/
+│   └── db.json                    
+│
+├── package.json
+└── README.md
 
 
 ## Objectives
@@ -73,11 +112,11 @@ Delete or edit records directly from the lists.
 
 
 # Screenshot
-![alt text](<Screenshot from 2026-02-22 10-30-47.png>)
+![alt text](<Screenshot from 2026-02-23 21-33-34.png>)
 
-
-![alt text](<Screenshot from 2026-02-22 10-31-15.png>)
-
+![alt text](<Screenshot from 2026-02-23 21-34-15.png>)
+![alt text](<Screenshot from 2026-02-23 21-34-41.png>)
+![alt text](<Screenshot from 2026-02-23 21-35-18.png>)
 # Licences
 This project is MT licenced 
 

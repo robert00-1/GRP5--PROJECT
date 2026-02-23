@@ -2,16 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button.jsx";
 
-// React Icons
-import {
-  FaUsers,
-  FaBookOpen,
-  FaGraduationCap,
-  FaTachometerAlt,
-  FaArrowRight,
-  FaDatabase,
-} from "react-icons/fa";
-
 export default function Home() {
   const [studentCount, setStudentCount] = useState(0);
 
@@ -23,17 +13,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="space-y-10">
-      {/* Welcome Header */}
+    <div className="space-y-12">
       <h1 className="text-3xl font-bold">Welcome to SMS</h1>
 
-      {/* ========================= HERO SECTION ========================= */}
+      {/* HERO SECTION */}
       <section className="rounded-3xl border bg-white p-6 md:p-10 shadow-sm">
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-          {/* Left Side */}
-          <div className="space-y-3">
-            <p className="text-sm font-medium text-gray-600 flex items-center gap-2">
-              <FaTachometerAlt size={30} />
+          <div className="space-y-4">
+            <p className="text-sm font-medium text-gray-600">
               Student Course Management System (SCMS)
             </p>
 
@@ -42,81 +29,56 @@ export default function Home() {
             </h1>
 
             <p className="text-gray-600 max-w-2xl">
-              Register students and courses, enroll learners, assign grades, and
-              keep records consistent without spreadsheets or manual paperwork.
+              Register students and courses, enroll learners, assign grades,
+              and keep records consistent without spreadsheets.
             </p>
 
-            {/* Action Buttons */}
             <div className="flex flex-wrap gap-3 pt-4">
               <Link to="/students">
-                <Button className="bg-blue-600 text-white hover:bg-blue-700">
-                  <span className="inline-flex items-center gap-2">
-                    <FaUsers size={16} />
-                    View Students ({studentCount})
-                    <FaArrowRight size={16} />
-                  </span>
+                <Button className="bg-blue-600 text-white hover:bg-blue-700 px-5 py-2 rounded-xl">
+                  View Students ({studentCount})
                 </Button>
               </Link>
 
               <Link to="/courses">
-                <Button className="bg-green-600 text-white hover:bg-green-700">
-                  <span className="inline-flex items-center gap-2">
-                    <FaBookOpen size={16} />
-                    View Courses
-                    <FaArrowRight size={16} />
-                  </span>
+                <Button className="bg-green-600 text-white hover:bg-green-700 px-5 py-2 rounded-xl">
+                  View Courses
                 </Button>
               </Link>
 
               <Link to="/about">
-                <Button className="bg-gray-800 text-white hover:bg-gray-900">
-                  <span className="inline-flex items-center gap-2">
-                    <FaGraduationCap size={16} />
-                    About SCMS
-                    <FaArrowRight size={16} />
-                  </span>
+                <Button className="bg-gray-800 text-white hover:bg-gray-900 px-5 py-2 rounded-xl">
+                  About SCMS
                 </Button>
               </Link>
             </div>
           </div>
 
-          {/* Right Side Cards */}
-          <div className="grid grid-cols-2 gap-3 w-full md:w-[360px]">
+          {/* RIGHT SIDE INFO CARDS */}
+          <div className="grid grid-cols-2 gap-4 w-full md:w-[360px]">
             <div className="rounded-2xl border p-4">
-              <div className="flex items-center gap-2">
-                <FaUsers size={16} />
-                <p className="font-semibold">Student Records</p>
-              </div>
+              <p className="font-semibold">Student Records</p>
               <p className="text-xs text-gray-600 mt-1">
                 Total students: {studentCount}
               </p>
             </div>
 
             <div className="rounded-2xl border p-4">
-              <div className="flex items-center gap-2">
-                <FaBookOpen size={16} />
-                <p className="font-semibold">Course Catalog</p>
-              </div>
+              <p className="font-semibold">Course Catalog</p>
               <p className="text-xs text-gray-600 mt-1">
                 Manage courses and credits easily.
               </p>
             </div>
 
             <div className="rounded-2xl border p-4">
-              <div className="flex items-center gap-2">
-                <FaGraduationCap size={16} />
-                <p className="font-semibold">Enrollments</p>
-              </div>
+              <p className="font-semibold">Enrollments</p>
               <p className="text-xs text-gray-600 mt-1">
                 Enroll students and track grades.
               </p>
             </div>
 
             <div className="rounded-2xl border p-4">
-              <div className="flex items-center gap-2">
-                <FaDatabase size={16} />
-                <p className="font-semibold">React + JSON Server</p>
-              </div>
+              <p className="font-semibold">React + JSON Server</p>
               <p className="text-xs text-gray-600 mt-1">
                 Fast demo backend for development.
               </p>
@@ -125,69 +87,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========================= FEATURE SECTION ========================= */}
-      <section className="grid gap-4 md:grid-cols-3">
-        {/* Students Feature Card */}
-        <div className="rounded-3xl border bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2">
-            <FaUsers size={20} />
-            <h2 className="text-lg font-semibold">Students</h2>
-          </div>
+      {/* FEATURE SECTION */}
+      <section className="grid gap-6 md:grid-cols-3">
+        <div className="rounded-3xl border bg-white p-6 shadow-sm hover:shadow-lg transition">
+          <h2 className="text-lg font-semibold">Students</h2>
           <p className="text-gray-600 text-sm mt-2">
-            Add student profiles with registration number, year of study, and
-            contact information.
+            Add student profiles with registration number and details.
           </p>
           <div className="pt-4">
             <Link to="/add-student">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700">
-                <span className="inline-flex items-center gap-2">
-                  <FaUsers size={16} />
-                  Add Student
-                </span>
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-5 py-2 rounded-xl">
+                Add Student
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* Courses Feature Card */}
-        <div className="rounded-3xl border bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2">
-            <FaBookOpen size={20} />
-            <h2 className="text-lg font-semibold">Courses</h2>
-          </div>
+        <div className="rounded-3xl border bg-white p-6 shadow-sm hover:shadow-lg transition">
+          <h2 className="text-lg font-semibold">Courses</h2>
           <p className="text-gray-600 text-sm mt-2">
-            Create course units with code, title, and credits. Edit or remove
-            outdated courses anytime.
+            Create and manage course units with credits and codes.
           </p>
           <div className="pt-4">
             <Link to="/add-course">
-              <Button className="bg-green-600 text-white hover:bg-green-700">
-                <span className="inline-flex items-center gap-2">
-                  <FaBookOpen size={16} />
-                  Add Course
-                </span>
+              <Button className="bg-green-600 text-white hover:bg-green-700 px-5 py-2 rounded-xl">
+                Add Course
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* Enrollment Feature Card */}
-        <div className="rounded-3xl border bg-white p-6 shadow-sm">
-          <div className="flex items-center gap-2">
-            <FaGraduationCap size={20} />
-            <h2 className="text-lg font-semibold">Enroll & Grade</h2>
-          </div>
+        <div className="rounded-3xl border bg-white p-6 shadow-sm hover:shadow-lg transition">
+          <h2 className="text-lg font-semibold">Enroll & Grade</h2>
           <p className="text-gray-600 text-sm mt-2">
-            Enroll students into courses and assign grades. View everything from
-            student or course pages.
+            Enroll students into courses and assign grades easily.
           </p>
           <div className="pt-4">
             <Link to="/students">
-              <Button className="bg-gray-800 text-white hover:bg-gray-900">
-                <span className="inline-flex items-center gap-2">
-                  <FaGraduationCap size={16} />
-                  Start Enrolling
-                </span>
+              <Button className="bg-gray-800 text-white hover:bg-gray-900 px-5 py-2 rounded-xl">
+                Start Enrolling
               </Button>
             </Link>
           </div>
