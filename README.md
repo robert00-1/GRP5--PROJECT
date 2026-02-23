@@ -45,6 +45,33 @@ Use Add Student / Add Course buttons to add new records.
 
 Delete or edit records directly from the lists.
 
+
+## Objectives
+- Maintain student records
+- Manage course details
+- Handle course enrollment
+- Reduce manual paperwork
+
+
+## Scope of the Project
+- Create student and course registration forms (CRUD)
+- Read course and student information
+- Update course and student information
+- Delete course or student information
+- Deploy to a web hosting service (future)
+
+
+## Key Features
+✅ Students CRUD (Create, Read, Update, Delete)  
+✅ Courses CRUD (Create, Read, Update, Delete)  
+✅ Enroll students into courses  
+✅ View enrollments from both sides:
+- Student detail → enrolled courses
+- Course detail → enrolled students  
+✅ Assign and update grades  
+✅ Remove enrollments  
+
+
 # Screenshot
 ![alt text](<Screenshot from 2026-02-22 10-30-47.png>)
 
@@ -56,4 +83,10 @@ This project is MT licenced
 
 # Author 
 Robert Mmasi
-Software Engineering Student
+- Penina Wanyama  
+- Samuel Wanjau  
+- Sharon Ouko  
+- Sylvana Wanjiru  
+
+
+Software Engineering Students
