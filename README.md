@@ -75,7 +75,7 @@ scms-project/
 │   │   └── Button.jsx
 │   │
 │   ├── App.jsx                  
-│   ├── main.jsx                   #
+│   ├── main.jsx                   
 │   └── main.css      (tailwind css)            
 │
 ├── data/
@@ -112,11 +112,8 @@ scms-project/
 
 
 # Screenshot
-![alt text](<Screenshot from 2026-02-23 21-33-34.png>)
-
-![alt text](<Screenshot from 2026-02-23 21-34-15.png>)
-![alt text](<Screenshot from 2026-02-23 21-34-41.png>)
-![alt text](<Screenshot from 2026-02-23 21-35-18.png>)
+![alt text](<Screenshot from 2026-02-25 07-57-59.png>)
+![alt text](<Screenshot from 2026-02-25 07-58-36.png>)
 # Licences
 This project is MT licenced 
 

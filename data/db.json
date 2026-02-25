@@ -2,7 +2,8 @@
   "courses": [
     {
       "id": "1",
-      "title": "React JS",
+      "code": "CS101",
+      "name": "React JS",
       "description": "Learn React from basics including components, hooks and routing.",
       "duration": "3 Months",
       "fee": 500,
@@ -11,11 +12,42 @@
     },
     {
       "id": "2",
-      "title": "Database Systems",
+      "code": "DB201",
+      "name": "Database Systems",
       "description": "Introduction to SQL, database design and normalization.",
       "duration": "4 Months",
       "fee": 600,
       "instructor": "Samuel Wanjau",
+      "credits": 4
+    },
+    {
+      "id": "3",
+      "code": "JS301",
+      "name": "JavaScript Advanced",
+      "description": "Deep dive into JS ES6+, async, and DOM manipulation.",
+      "duration": "3 Months",
+      "fee": 450,
+      "instructor": "Alice Njeri",
+      "credits": 3
+    },
+    {
+      "id": "4",
+      "code": "PY101",
+      "name": "Python Programming",
+      "description": "Python basics and practical projects.",
+      "duration": "3 Months",
+      "fee": 500,
+      "instructor": "Brian Otieno",
+      "credits": 3
+    },
+    {
+      "id": "5",
+      "code": "CS202",
+      "name": "Data Structures",
+      "description": "Learn arrays, linked lists, trees, and algorithms.",
+      "duration": "4 Months",
+      "fee": 600,
+      "instructor": "Catherine Njeri",
       "credits": 4
     }
   ],
@@ -25,14 +57,45 @@
       "name": "John Doe",
       "email": "john@gmail.com",
       "phone": "0712345678",
-      "courseId": 1
+      "regNo": "REG001",
+      "year": "2026",
+      "course": "React JS"
     },
     {
-      "id": "3",
+      "id": "2",
       "name": "Robert Mmasi",
       "email": "robert@gmail.com",
       "phone": "0700111222",
-      "courseId": 1
+      "regNo": "REG002",
+      "year": "2026",
+      "course": "React JS"
+    },
+    {
+      "id": "3",
+      "name": "Alice Wanjiku",
+      "email": "alice@gmail.com",
+      "phone": "0722334455",
+      "regNo": "REG003",
+      "year": "2025",
+      "course": "Database Systems"
+    },
+    {
+      "id": "4",
+      "name": "Brian Otieno",
+      "email": "brian@gmail.com",
+      "phone": "0733445566",
+      "regNo": "REG004",
+      "year": "2025",
+      "course": "Database Systems"
+    },
+    {
+      "id": "5",
+      "name": "Catherine Njeri",
+      "email": "catherine@gmail.com",
+      "phone": "0744556677",
+      "regNo": "REG005",
+      "year": "2026",
+      "course": "React JS"
     }
   ]
 }

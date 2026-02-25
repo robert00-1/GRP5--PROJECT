@@ -1,4 +1,4 @@
-export default function Button({ children, onClick, color = "blue", type="button" }) {
+export default function Button({ children, onClick, color = "blue", type = "button" }) {
   const colors = {
     blue: "bg-blue-600 hover:bg-blue-700",
     red: "bg-red-600 hover:bg-red-700",
